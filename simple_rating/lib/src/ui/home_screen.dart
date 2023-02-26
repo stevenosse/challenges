@@ -198,9 +198,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           color: Colors.white,
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 35.0),
+                          padding: const EdgeInsets.symmetric(horizontal: 50.0),
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Bar(
                                 color: _emotion == Emotion.sad ? Colors.black : Colors.grey[300],
