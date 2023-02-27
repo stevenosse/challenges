@@ -64,10 +64,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               systemOverlayStyle: SystemUiOverlayStyle(
                 statusBarColor: _colorAnimation.value,
                 statusBarIconBrightness: Brightness.light,
-              )
+              ),
             );
           },
-        )
+        ),
       ),
       body: SafeArea(
         top: false,
@@ -240,7 +240,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         }
                       }(),
                       duration: const Duration(milliseconds: 300),
-                      curve: Curves.easeInCubic,
                       child: DraggableButton(
                         onEmotionChanged: (emotion) {
                           _setEmotion(emotion: emotion);
@@ -291,17 +290,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     });
     switch (emotion) {
       case Emotion.happy:
-        _colorAnimationController
-          ..reset()
-          ..animateTo(1.0);
+        _colorAnimationController.animateTo(1.0);
         _sizeAnimationController.forward(from: 0.0);
         _textAnimationController.forward(from: 0.0);
         break;
       case Emotion.confuse:
         _sizeAnimationController.forward(from: 0.0);
-        _colorAnimationController
-          ..reset()
-          ..animateTo(.35);
+        _colorAnimationController.animateTo(.35);
         _textAnimationController.forward(from: 0.0);
         break;
       case Emotion.sad:
